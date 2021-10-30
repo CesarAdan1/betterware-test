@@ -5,6 +5,7 @@ export const CartContext = createContext();
 
 // Wrap our app and provide the Data layer
 export const StateProvider = ({ reducer, initialState, children }) => (
+  
   <CartContext.Provider value={useReducer(reducer, initialState)}>
     {children}
   </CartContext.Provider>

@@ -1,51 +1,75 @@
 export const initialState = {
     basket: [],
-  };
+};
 
-  export const getBasketTotal = (basket) => 
-  basket?.reduce((amount, item) => item.price + amount, 0);
+export const initializer = (initialState) => JSON.parse(localStorage.getItem("localCart")) || initialState;
+
+export const getBasketTotal = (basket) =>
+    basket?.reduce((amount, item) => item.price + amount, 0);
 
 const cartReducer = (state, action) => {
-  console.log(action);
-  switch (action.type) {
-    case "ADD_TO_BASKET":
-      return {
-        ...state,
-        basket: [...state.basket, action.item],
-      };
-    
-    case 'EMPTY_BASKET':
-      return {
-        ...state,
-        basket: []
-      }
+    console.log(action);
+    switch (action.type) {
+        case "ADD_TO_BASKET":
+            return {
+                ...state,
+                basket: [...state.basket, action.item],
+            };
 
-    case "REMOVE_FROM_BASKET":
-      const index = state.basket.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
-      let newBasket = [...state.basket];
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            }
 
-      if (index >= 0) {
-        newBasket.splice(index, 1);
+        case "REMOVE_FROM_BASKET":
+            const index = state.basket.findIndex(
+                (basketItem) => basketItem.id === action.id
+            );
+            let newBasket = [...state.basket];
 
-      } else {
-        console.warn(
-          `Cant remove product (id: ${action.id}) as its not in basket!`
-        )
-      }
+            if (index >= 0) {
+                newBasket.splice(index, 1);
 
-      return {
-        ...state,
-        basket: newBasket
-      }
-      
-    case 'CLEAR_CART':
-      return {initialState}
+            } else {
+                console.warn(
+                    `Cant remove product (id: ${action.id}) as its not in basket!`
+                )
+            }
 
-    default:
-      return state;
-  }
+            return {
+                ...state,
+                basket: newBasket
+            }
+
+        case "INCREMENT_ITEM":
+            return state.find((item) => item.name === action.item.name)?.quantity ===
+        1
+        ? state.filter((item) => item.name !== action.item.name)
+        : state.map((item) =>
+            item.name === action.item.name
+              ? {
+                  ...item,
+                  quantity: item.quantity - 1
+                }
+              : item
+          );
+        case 'CLEAR_CART':
+            return { initialState }
+
+        default:
+            return state;
+    }
 };
+
+export const decrementItemQuantity = (item) => ({
+    type: "DECREMENT_QUANTITY",
+    item
+  });
+  
+  export const removeFromCart = (item) => ({
+    type: "REMOVE_FROM_CART",
+    item
+  });
 
 export default cartReducer;

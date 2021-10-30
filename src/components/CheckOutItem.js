@@ -19,11 +19,22 @@ export const CheckOutItem = ({
     }
 
     const addMoreQuantity = () => {
-
+        dispatch({
+            type: "ADD_TO_BASKET",
+            items: {
+                id: id,
+                name: name,
+                image: image,
+                price: price,
+            },
+        });
     }
 
     const addLessQuantity = () => {
-
+        dispatch({
+            type: 'DECREMENT_ITEM',
+            
+        })
     }
 
   const canasta = basket
