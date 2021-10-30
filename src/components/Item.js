@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useStateValue } from '../state/context/CartContext'
 import { useEffect } from 'react';
 
@@ -22,22 +21,22 @@ const Item = (props) => {
 
     return (
         <div className='item-cont'>
-            <Link to={`/item/${item.name}`} className='hd-logo'>
+            {/* <Link to={`/item/${item.name}`} className='hd-logo'> */}
                 <div>
                     <img width={300} height={200} src={item.image} alt={item.name} />
                 </div>
-                <h2 className="color-dark title-it" style={{ width: "300px", marginBottom: "14px" }} 
+                <h2 className="color-dark title-it hd-logo" style={{ width: "300px", marginBottom: "14px" }} 
                     title={item.name}>{item.name}
                 </h2>
                 <span className='color-dark price-it flex mg'>
                     <div >
                         <span>{"Precio: "}</span>
                     </div>
-                    <div className='flex'>
+                    <div className='flex hd-logo-l'>
                         <span>$</span> <span className='text'>{item.price}{" "}{"MXN"}</span>
                     </div>
                 </span>
-            </Link>
+            {/* </Link> */}
             <Button
                 onClick={addToBasket}
             />

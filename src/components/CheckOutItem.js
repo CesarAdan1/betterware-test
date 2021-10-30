@@ -38,21 +38,21 @@ export const CheckOutItem = ({
     return (
         <Fragment>
             <div className='item-cont col-flex' style={{width: "300px"}}>
-                <Link to={`/item/${name}`} className='hd-logo' title={name}>
+                {/* <Link to={`/item/${name}`} className='hd-logo' title={name}> */}
                     <div>
                         <img width={300} height={200} src={image} alt={name} />
                     </div>
-                    <h2 className="color-dark title-it" style={{ width: "300px", marginBottom: "14px" }} title={name}>{name}</h2>
+                    <h2 className="color-dark title-it hd-logo" style={{ width: "300px", marginBottom: "14px" }} title={name}>{name}</h2>
 
-                    <span className='color-dark price-it flex mg'>
+                    <span className='color-dark price-it flex mg hd-logo-l' style={{width: '300px'}}>
                         <div >
                             <span>{"Precio: "}</span>
                         </div>
                         <div className='flex'>
-                            <span>$</span> <span className='text'>{price}{" "}{"MXN"}</span>
+                            <span>$</span> <span className='text hd-logo-l'>{price}{" "}{"MXN"}</span>
                         </div>
                     </span>
-                </Link>
+                {/* </Link> */}
                 <div>
                     <div className='flex mg'>
                         <span className='plus' onClick={addMoreQuantity}>

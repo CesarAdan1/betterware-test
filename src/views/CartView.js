@@ -28,8 +28,8 @@ const CartView = () => {
             <div className='cart-cont'>
                 {basket.length !== 0
                     ?
-                    <div>
-                        <div>
+                    <div className='cont-cart-view'>
+                        <div className='arti-cont'>
                             <div className='cont-items-quantity'>
                                 <h3>{`Hay ${basket.length} articulos en tu carrito`}</h3>
                             </div>
