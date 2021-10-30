@@ -1,15 +1,18 @@
-import Routes from './navigation/Routes';
-import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom'
-import CartContext, { StateProvider } from './state/context/CartContext';
+import Routes from "./navigation/Routes";
+import "./App.css";
+import { BrowserRouter as Router } from "react-router-dom";
+import { StateProvider } from "./state/context/CartContext";
+import cartReducer, { initialState } from "./state/context/cartReducer";
+import { useEffect } from "react";
 
 function App() {
+  
   return (
     <div className="App">
-      <StateProvider>
-      <Router> 
-        <Routes />
-      </Router>
+      <StateProvider initialState={initialState} reducer={cartReducer}>
+        <Router>
+          <Routes />
+        </Router>
       </StateProvider>
     </div>
   );
