@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MainContainer } from '../components/containers/MainContainer'
 import Item from '../components/Item'
 import items from '../utils/cartItems.json'
 
 const HomeView = (props) => {
-    console.log(items)
-    console.log(props)
+    useEffect(() => {
+        document.title = 'Betterware App Challenge'
+    })
     return (
         <MainContainer>
             <div className='wrap'>

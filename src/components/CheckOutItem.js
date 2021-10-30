@@ -7,10 +7,6 @@ export const CheckOutItem = ({
 }) => {
     const [{basket}, dispatch] = useStateValue();
 
-    useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(basket))
-    }, [basket])
-
     const removeFromBasket = () => {
         dispatch({
             type: 'REMOVE_FROM_BASKET',
@@ -20,7 +16,7 @@ export const CheckOutItem = ({
 
     const addMoreQuantity = () => {
         dispatch({
-            type: "ADD_TO_BASKET",
+            type: "INCREMENT_ITEM",
             items: {
                 id: id,
                 name: name,
@@ -32,8 +28,8 @@ export const CheckOutItem = ({
 
     const addLessQuantity = () => {
         dispatch({
-            type: 'DECREMENT_ITEM',
-            
+            type: 'REMOVE_FROM_BASKET',
+            id: id
         })
     }
 
@@ -42,7 +38,7 @@ export const CheckOutItem = ({
     return (
         <Fragment>
             <div className='item-cont col-flex' style={{width: "300px"}}>
-                <Link to={`/item/${name}`} className='hd-logo'>
+                <Link to={`/item/${name}`} className='hd-logo' title={name}>
                     <div>
                         <img width={300} height={200} src={image} alt={name} />
                     </div>

@@ -10,26 +10,22 @@ import ItemView from '../views/ItemView';
 const Routes = () => {
     return (
         <Switch>
-            
             <Route exact path="/">
-            <Header />
+                <Header />
                 <HomeView />
             </Route>
             <Route excat path="/cart">
-            <Header />
-
+                <Header />
                 <CartView />
             </Route>
             <Route exact path="/pagar">
-            <Header />
-
+                <Header />
                 <CheckoutView />
             </Route>
-            <Route exact path="/item/:name">
-            <Header />
-
+            {/* <Route exact path="/item/:name">
+                <Header />
                 <ItemView />
-            </Route>
+            </Route> */}
         </Switch>
     )
 }

@@ -4,17 +4,18 @@ import { useStateValue } from '../state/context/CartContext'
 import { getBasketTotal } from "../state/context/cartReducer";
 import { useHistory } from "react-router-dom";
 
-const Subtotal = ({text}) => {
+const Subtotal = ({text, onClick}) => {
   const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
 
   return (
     <div className="subtotal">
-      <CurrencyFormat
+      {basket.length !== 0
+        ?<CurrencyFormat
         renderText={(value) => (
           <>
             <p className="txt-tot">
-              Subtotal ({basket.length} items): <strong>{value}</strong>
+              Subtotal ({basket.length} articulos): <strong>{value}</strong>
             </p>
           </>
         )}
@@ -24,9 +25,11 @@ const Subtotal = ({text}) => {
         thousandSeparator={true}
         prefix={"$"}
       />
-
+        : null
+      }
+      
     <div className='item-btn mg'>
-            <button className='itm-btn-c' onClick={e => history.push('/pagar')}>{text}</button>
+            <button className='itm-btn-c' onClick={onClick}>{text}</button>
         </div>
     </div>
   );

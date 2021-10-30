@@ -1,8 +1,6 @@
 export const initialState = {
-    basket: [],
+    basket: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
 };
-
-export const initializer = (initialState) => JSON.parse(localStorage.getItem("localCart")) || initialState;
 
 export const getBasketTotal = (basket) =>
     basket?.reduce((amount, item) => item.price + amount, 0);
@@ -33,24 +31,25 @@ const cartReducer = (state, action) => {
 
             } else {
                 console.warn(
-                    `Cant remove product (id: ${action.id}) as its not in basket!`
+                    `No se puede eliminar el articulo con el  (id: ${action.id})`
                 )
             }
 
+            localStorage.removeItem('cart');
+            
             return {
                 ...state,
                 basket: newBasket
             }
 
         case "INCREMENT_ITEM":
-            return state.find((item) => item.name === action.item.name)?.quantity ===
-        1
-        ? state.filter((item) => item.name !== action.item.name)
-        : state.map((item) =>
+            return state.basket.find((item) => item.name === action.item.name)?.quantity === 1
+        ? state.basket.filter((item) => item.name !== action.item.name)
+        : state.basket.map((item) =>
             item.name === action.item.name
               ? {
                   ...item,
-                  quantity: item.quantity - 1
+                  quantity: item.quantity + 1
                 }
               : item
           );
