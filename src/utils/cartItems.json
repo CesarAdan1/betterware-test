@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Concept Cybot 12 Wheel Boys Bicycle",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": 12
+    },
+    {
+        "id": 2,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "Fast help when you're in need! If you can't get to the toilet in time, then the UNISEX urine bottle comes discretely to your rescue. Whether you are on a long car journey with kids or need for an emergency, it will always be there for you if needs be.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661006981.jpg",
+        "available": 35
+    },
+    {
+        "id": 3,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": 0
+    },
+    {
+        "id": 4,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    },
+    {
+        "id": 5,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    },
+    {
+        "id": 6,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    },
+    {
+        "id": 7,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": 0
+    },
+    {
+        "id": 8,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    },
+    {
+        "id": 9,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    },
+    {
+        "id": 10,
+        "name": "Portable Loo - Unisex",
+        "price": 100,
+        "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
+        "available": true
+    }
+]

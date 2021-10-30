@@ -1,10 +1,93 @@
-.App {
-  text-align: center;
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --hd-color: #25287F;
+  --color-text-light: #fff;
+  --color-text-dark: black;
+  --hg-hd: 70px;
+  --hg-mob-hd: 60px;
+
+}
+
+.hd-logo {
+  text-decoration: none;
+  color: var(--color-text-light);
+  font-weight: 800;
+}
+
+.container {
+  margin-top: var(--hg-mob-hd);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.wrap {
+  display: flex;
+    flex-wrap: wrap;
+}
+.cart-is {
+
+}
+
+.color-dark {
+  color: var(--color-text-dark);
+}
+.flex-c {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headr {
+  width: 100%;
+  height: var(--hg-mob-hd);
+  background-color: var(--hd-color);
+  color: var(--color-text-light);
+}
+
+.hd-contain {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  margin-right: 10%;
+  margin-left: 10%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media-only screen and (min-width: 599px) {
+  .container {
+    margin-top: var(--hg-hd);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .headr {
+    width: 100%;
+    height: var(--hg-hd);
+    background-color: var(--hd-color);
+    color: var(--color-text-light);
+  }  
+}
+
+
+@media-only screen and (min-width: 1200px) {
+  .container {
+    margin-top: var(--hg-hd);
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .headr {
+    width: 100%;
+    height: var(--hg-hd);
+    background-color: var(--hd-color);
+    color: var(--color-text-light);
+  }
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
