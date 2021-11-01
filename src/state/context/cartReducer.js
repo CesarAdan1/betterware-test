@@ -1,5 +1,9 @@
+export const storageKey = "cartItems"
+
 export const initialState = {
-    basket: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+    basket: window.localStorage.getItem("cartItems") !== null
+    ? JSON.parse(window.localStorage.getItem("cartItems"))
+    : []
 };
 
 export const getBasketTotal = (basket) =>
@@ -35,8 +39,8 @@ const cartReducer = (state, action) => {
                 )
             }
 
-            localStorage.removeItem('cart');
-            
+            localStorage.removeItem(storageKey);
+
             return {
                 ...state,
                 basket: newBasket

@@ -32,7 +32,7 @@ This is a ecommerce app that can allows you to:
 3) Delete from the cart
 4) Use localStorage to save in the browser when reload the page.
 5) Delete from the CheckoutView
-6) Increment and decrement items
+
 
 ## This project uses: 
 

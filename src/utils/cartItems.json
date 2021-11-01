@@ -5,7 +5,8 @@
         "price": 100,
         "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
-        "available": 12
+        "available": 12,
+        "quantity": 1
     },
     {
         "id": 2,
@@ -13,7 +14,9 @@
         "price": 126.80,
         "details": "Fast help when you're in need! If you can't get to the toilet in time, then the UNISEX urine bottle comes discretely to your rescue. Whether you are on a long car journey with kids or need for an emergency, it will always be there for you if needs be.",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661006981.jpg",
-        "available": 35
+        "available": 35,
+        "quantity": 1
+
     },
     {
         "id": 3,
@@ -21,7 +24,9 @@
         "price": 885.52,
         "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
         "image": "https://m.media-amazon.com/images/I/71EzJupuZSL._AC_SX679_.jpg",
-        "available": 0
+        "available": 0,
+        "quantity": 1
+
     },
     {
         "id": 4,
@@ -29,7 +34,9 @@
         "price": 704.90,
         "details": "The Cybot bike comes equipped with a single-speed freewheel transmission. Designed for the young rider taking their first rides with removable stabilizers and height-adjustable saddle and handlebars. A stylish red frame and rims are the background for a matching full chainguard and stabilizers.",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661235753.jpg",
-        "available": true
+        "available": true,
+        "quantity": 1
+
     },
     {
         "id": 5,
@@ -37,15 +44,19 @@
         "price": 100,
         "details": "100 Facts Gladiators is bursting with detailed historical images, great activities and facts for kids. Children will learn everything they need to know about these ancient Roman warriors.",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/1881195283.jpg",
-        "available": true
+        "available": true,
+        "quantity": 1
+
     },
     {
         "id": 6,
         "name": "Cosmetic Tissues Box",
         "price": 300.83,
         "details": "Practical dispenser box made of MDF. Suitable for cosmetic tissues.This beautiful Toucan-style tissue box is the perfect addition to any home or office to store away tissues. With a vibrant design, it is also ideal as a gift.Size: W:24 cm x H: 9 cm",
-        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2660929322.jpg",
-        "available": true
+        "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661006891.jpg",
+        "available": true,
+        "quantity": 1
+
     },
     {
         "id": 7,
@@ -53,7 +64,9 @@
         "price": 160.66,
         "details": "Along with the 100% mirror surface, this mirror also offers a 3-x magnification for cosmetic purposes. The 3-x magnification is ideal for more visibility when shaving, putting on makeup, and any other close-up needs.Size: W: 17.5 cm x H:20 cm x D:9 cm,Enlargement:3%,Reflecting surface: Ø12.5 cm",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661006886.jpg",
-        "available": 0
+        "available": 0,
+        "quantity": 1
+
     },
     {
         "id": 8,
@@ -61,7 +74,9 @@
         "price": 120.60,
         "details": "Our A6 glossy greetings cards are great as gifts for any occasion! 10 x A6 Landscape Cards With Free Luxury Envelopes.Size: A6 10.5cm x 14.8cm",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/1892431114.jpg",
-        "available": true
+        "available": true,
+        "quantity": 1
+
     },
     {
         "id": 9,
@@ -69,7 +84,9 @@
         "price": 100.99,
         "details": "This set of memory foam arch pads help to correct flat feet and provide comfort throughout the day. They help to gently reposition the sole of the foot to provide relief from pain so that you can go about your daily routine with ease.",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/2661006961.jpg",
-        "available": true
+        "available": true,
+        "quantity": 1
+
     },
     {
         "id": 10,
@@ -77,6 +94,8 @@
         "price": 200.60,
         "details": "Perfect for wrapping that special children's gift!",
         "image": "https://d2j6dbq0eux0bg.cloudfront.net/images/16918207/1892461182.jpg",
-        "available": true
+        "available": true,
+        "quantity": 1
+
     }
 ]

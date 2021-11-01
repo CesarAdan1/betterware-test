@@ -10,6 +10,7 @@ const Subtotal = ({text, onClick}) => {
 
   return (
     <div className="subtotal">
+      <div className="subtotal-cont">
       {basket.length !== 0
         ?<CurrencyFormat
         renderText={(value) => (
@@ -31,6 +32,7 @@ const Subtotal = ({text, onClick}) => {
     <div className='item-btn mg'>
             <button className='itm-btn-c' onClick={onClick}>{text}</button>
         </div>
+    </div>
     </div>
   );
 }

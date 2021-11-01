@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useStateValue } from '../state/context/CartContext'
 
+
 import Cart from './Cart'
 
 const Header = () => {
@@ -26,4 +27,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default React.memo(Header)

@@ -3,7 +3,7 @@ import { CheckOutItem } from '../components/CheckOutItem'
 import { MainContainer } from '../components/containers/MainContainer'
 import Subtotal from '../components/SubTotal'
 import { useStateValue } from '../state/context/CartContext'
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export const CheckoutView = () => {
     const [{ basket }, dispatch] = useStateValue();
@@ -16,7 +16,7 @@ export const CheckoutView = () => {
 
     return (
         <MainContainer>
-            <div className='flex' style={{ flexDirection: "column" }}>
+            <div className='flex mg' style={{ flexDirection: "column" }}>
                 {basket.length > 0 ? 
                  <div>
                     <h3>Detalles del pedido</h3>
@@ -25,7 +25,7 @@ export const CheckoutView = () => {
                 <h3>No hay detalles del pedido</h3>
             </div>  
             }
-                <div className='flex' style={{ flexDirection: "column" }}>
+                <div className='flex mgp' style={{ flexDirection: "column" }}>
                     {
                         basket.map((item, index) => (
                             <CheckOutItem

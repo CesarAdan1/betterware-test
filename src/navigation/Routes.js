@@ -22,10 +22,10 @@ const Routes = () => {
                 <Header />
                 <CheckoutView />
             </Route>
-            {/* <Route exact path="/item/:name">
+           {/*  <Route exact path="/item/:name">
                 <Header />
                 <ItemView />
-            </Route> */}
+            </Route>  */}
         </Switch>
     )
 }

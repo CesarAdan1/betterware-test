@@ -1,15 +1,18 @@
-import React, { createContext, useContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer, useEffect } from "react";
+import { storageKey } from "./cartReducer";
 
-// Prepares the dataLayer
 export const CartContext = createContext();
 
-// Wrap our app and provide the Data layer
-export const StateProvider = ({ reducer, initialState, children }) => (
-  
-  <CartContext.Provider value={useReducer(reducer, initialState)}>
-    {children}
-  </CartContext.Provider>
-);
+export const StateProvider = ({ reducer, initialState, children }) => {
 
-// Pull information from the data layer
+
+  const localState = JSON.parse(localStorage.getItem(storageKey));
+
+  return (
+    <CartContext.Provider value={useReducer(reducer, localState || initialState)}>
+      {children}
+    </CartContext.Provider>
+  )
+};
+
 export const useStateValue = () => useContext(CartContext);

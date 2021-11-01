@@ -1,56 +1,53 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useStateValue } from '../state/context/CartContext'
+import { MainContainer } from './containers/MainContainer';
 import { Button } from './Item';
 
 const ItemAlone = (props) => {
-    const { items, match } = props;
-
-    const [{basket}, dispatch] = useStateValue();
+    const { name, image, quantity, description, id, price } = useParams()
+    const [{ basket }, dispatch] = useStateValue();
 
     const addToBasket = () => {
         dispatch({
             type: "ADD_TO_BASKET",
-            items: {
-                id: items.id,
-                name: items.name,
-                image: items.image,
-                price: items.price,
+            item: {
+                id: id,
+                name: name,
+                image: image,
+                price: price,
+                quantity: quantity,
             },
         });
     };
 
-    function replaceSpace(str) {
-        return str.split(' ').join('+').toLowerCase();
-    }
-
     return (
-        <div className='item-container-con'>
-            <div>
+        <MainContainer>
+            <div className='item-cont' style={{ color: 'black' }} key={id}>
                 <div>
-                <h2 className="color-dark title-it" style={{ width: "300px", marginBottom: "14px" }} title={items.name}>{items.name}</h2>
-                <Link to={`/item/${replaceSpace(items.name)}`} className='hd-logo'>
-                    <div>
-                        <img width={300} height={200} src={items.image} alt={items.name} />
-                    </div>
-                </Link>
+                    <img className='img-item' src={image} alt={name} />
                 </div>
-                <div>
-                    <p>{items.details}</p>
+                <h2 className="color-dark title-it hd-logo" style={{ width: "300px", marginBottom: "14px" }}
+                    title={name}>{name}
+                </h2>
+                <div className='color-dark' style={{ display: 'flex', flexDirection: 'column' }}>
+                    <h2 className="color-dark title-it hd-logo">Detalles</h2>
+                    <p style={{ fontSize: '13px' }}>
+                        {description}
+                    </p>
                 </div>
-            </div>
-            <span className='color-dark price-it flex mg'>
+                <span className='color-dark price-it flex mg'>
                     <div >
                         <span>{"Precio: "}</span>
                     </div>
-                    <div className='flex'>
-                        <span>$</span> <span className='text'>{items.price}{" "}{"MXN"}</span>
+                    <div className='flex hd-logo-l'>
+                        <span>$</span> <span className='text'>{price}{" "}{"MXN"}</span>
                     </div>
+                    <Button
+                        onClick={addToBasket} />
                 </span>
-            <Button
-                onClick={addToBasket}
-            />
-        </div>
+            </div>
+        </MainContainer>
     )
 }
 

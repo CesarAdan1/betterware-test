@@ -18,17 +18,12 @@ const CartView = () => {
         document.title = 'Carrito de compras'
     })
     
-    useEffect(() => {
-        localStorage.setItem("cartItems", JSON.stringify(basket))
-    }, [basket])
-
-    
     return (
         <MainContainer>
             <div className='cart-cont'>
                 {basket.length !== 0
                     ?
-                    <div className='cont-cart-view'>
+                    <div className=''>
                         <div className='arti-cont'>
                             <div className='cont-items-quantity'>
                                 <h3>{`Hay ${basket.length} articulos en tu carrito`}</h3>

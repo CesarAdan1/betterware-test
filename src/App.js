@@ -4,6 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { StateProvider } from "./state/context/CartContext";
 import cartReducer, { initialState } from "./state/context/cartReducer";
 
+
 function App() {
   
   return (
