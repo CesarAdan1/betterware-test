@@ -1,5 +1,4 @@
 import { useStateValue } from '../state/context/CartContext'
-import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
@@ -56,7 +55,7 @@ export default Item
 export const Button = ({ onClick }) => {
     return (
         <div className='item-btn mg'>
-            <button className='itm-btn-c' onClick={onClick}>Agregar al carrito</button>
+            <button className='itm-btn-c' data-testid="btn" onClick={onClick}>Agregar al carrito</button>
         </div>
     )
 }

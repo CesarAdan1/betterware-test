@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Cart = ({ countItems }) => {
     return (
-        <Link to="/cart" className='hd-logo'>
+        <Link to="/cart" className='hd-logo' data-testId="lnk">
             <div style={{
                 display: 'flex',
                 justifyContent: 'center',

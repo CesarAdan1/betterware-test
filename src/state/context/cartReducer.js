@@ -1,9 +1,5 @@
-export const storageKey = "cartItems"
-
 export const initialState = {
-    basket: window.localStorage.getItem("cartItems") !== null
-    ? JSON.parse(window.localStorage.getItem("cartItems"))
-    : []
+    basket: []
 };
 
 export const getBasketTotal = (basket) =>
@@ -38,8 +34,6 @@ const cartReducer = (state, action) => {
                     `No se puede eliminar el articulo con el  (id: ${action.id})`
                 )
             }
-
-            localStorage.removeItem(storageKey);
 
             return {
                 ...state,

@@ -5,7 +5,6 @@ import { getBasketTotal } from "../state/context/cartReducer";
 import { useHistory } from "react-router-dom";
 
 const Subtotal = ({text, onClick}) => {
-  const history = useHistory();
   const [{ basket }, dispatch] = useStateValue();
 
   return (
@@ -30,7 +29,7 @@ const Subtotal = ({text, onClick}) => {
       }
       
     <div className='item-btn mg'>
-            <button className='itm-btn-c' onClick={onClick}>{text}</button>
+            <button className='itm-btn-c' data-testid="btn" onClick={onClick}>{text}</button>
         </div>
     </div>
     </div>
